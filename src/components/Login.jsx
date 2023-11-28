@@ -64,7 +64,7 @@ const Login = ({ onSubmit }) => {
           <hr />
         </div>
 
-        <div>
+        <div style={{ textAlign: "center" }}>
           <div>Proceed with your email</div>
           <input
             onChange={handleEmailChange}
