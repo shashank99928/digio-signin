@@ -13,6 +13,7 @@ const PAGES = {
 function App() {
   const [page, setPage] = useState(PAGES.login);
   const [open, setOpen] = useState(true);
+  const [isSiggnedIn, setIsSignedIn] = useState(false);
 
   useEffect(() => {
     const handleBeforeUnload = (event) => {
@@ -40,6 +41,7 @@ function App() {
   };
 
   const handleRegister = () => {
+    setIsSignedIn(setIsSignedIn);
     setPage(PAGES.SignedIn);
   };
 
@@ -48,13 +50,13 @@ function App() {
       {page === PAGES.login ? (
         <Login onSubmit={handleLogin} />
       ) : (
-        <Layout open={open}>
+        <Layout open={isSiggnedIn}>
           <>
-            {page === PAGES.Register ? (
+            {page === PAGES.Register && (
               <RegisterAadhaar onSubmit={handleRegister} />
-            ) : (
-              <SigningModal />
             )}
+
+            {page === PAGES.SignedIn && <SigningModal />}
           </>
         </Layout>
       )}
