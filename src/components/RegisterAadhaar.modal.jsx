@@ -107,7 +107,7 @@ const RegisterAadhaar = ({ onSubmit }) => {
                 maxLength={6}
                 minLength={6}
               />
-              <button onClick={handleSubmitOpt} disabled={!otp}>
+              <button onClick={handleSubmitOpt} disabled={!otp || !consent}>
                 Submit
               </button>
             </div>
