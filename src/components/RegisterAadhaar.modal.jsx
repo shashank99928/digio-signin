@@ -46,7 +46,12 @@ const RegisterAadhaar = ({ onSubmit }) => {
 
   return (
     <div style={{ background: "white", padding: "16px" }}>
-      <Snackbar open={verify} autoHideDuration={6000} onClose={handleClose}>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        open={verify}
+        autoHideDuration={6000}
+        onClose={handleClose}
+      >
         <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
           Aadhaar is valid
         </Alert>
