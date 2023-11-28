@@ -45,6 +45,7 @@ const Login = ({ onSubmit }) => {
 
       <div
         style={{
+          textAlign: "center",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -55,7 +56,14 @@ const Login = ({ onSubmit }) => {
         <div>
           {email && <div>{email} uses Gmail?</div>}
           <h2>Login using google</h2>
-          <button>Google Puls</button>
+          <button
+            style={{
+              background: "#d34836",
+              color: "white",
+            }}
+          >
+            Google Puls
+          </button>
         </div>
 
         <div>
@@ -64,22 +72,52 @@ const Login = ({ onSubmit }) => {
           <hr />
         </div>
 
-        <div style={{ textAlign: "center" }}>
-          <div>Proceed with your email</div>
+        <div style={{ textAlign: "center", maxWidth: "400px", width: "100%" }}>
+          <div
+            style={{
+              marginTop: "8px",
+              marginBottom: "8px",
+            }}
+          >
+            Proceed with your email
+          </div>
           <input
             onChange={handleEmailChange}
             placeholder="please enter email"
             value={email}
             maxLength={50}
+            style={{
+              height: "30px",
+              maxWidth: "400px",
+              width: "100%",
+              borderRadius: "5px",
+            }}
           />
 
-          <div>
-            By continuing,I confirm to the Tem{" "}
+          <div
+            style={{
+              marginTop: "8px",
+              marginBottom: "8px",
+            }}
+          >
+            By continuing,I confirm to the Terms and Service and Privacy Policy
+            of{" "}
             <a href="http://digio.in" target="_blank">
               Digio.in
             </a>
-            <button onClick={handleEmailSubmit}>Continue</button>
           </div>
+          <button
+            onClick={handleEmailSubmit}
+            style={{
+              background: "#0561b0",
+              color: "white",
+              maxWidth: "400px",
+              width: "100%",
+              borderRadius: "5px",
+            }}
+          >
+            Continue
+          </button>
         </div>
       </div>
 
