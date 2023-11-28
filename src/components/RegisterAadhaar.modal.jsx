@@ -6,7 +6,7 @@ import { Alert, Snackbar } from "@mui/material";
 const validOtp = "123456";
 
 const RegisterAadhaar = ({ onSubmit }) => {
-  const [aadhaar, setAadhaar] = useState();
+  const [aadhaar, setAadhaar] = useState("");
   const [consent, setConsent] = useState(false);
   const [verify, setVerified] = useState(false);
   const [otp, setOpt] = useState("");
