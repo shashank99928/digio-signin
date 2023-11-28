@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export const SigningModal = ({ onClose }) => {
+export const SigningModal = () => {
   const [signed, setSigned] = useState(true);
 
   useEffect(() => {

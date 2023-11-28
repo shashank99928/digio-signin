@@ -53,7 +53,7 @@ function App() {
             {page === PAGES.Register ? (
               <RegisterAadhaar onSubmit={handleRegister} />
             ) : (
-              <SigningModal signed={signed} />
+              <SigningModal />
             )}
           </>
         </Layout>
